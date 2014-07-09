@@ -15,7 +15,7 @@ class wallabag extends Plugin {
 		$host->add_hook($host::HOOK_PREFS_TAB, $this);
 		$host->add_hook($host::HOOK_ARTICLE_BUTTON, $this);
 	}
-	
+
 	function save() {
 	    $wallabag_url = db_escape_string($_POST["wallabag_url"]);
 	    $wallabag_username = db_escape_string($_POST["wallabag_username"]);
@@ -61,9 +61,9 @@ class wallabag extends Plugin {
 		print "<table width=\"100%\" class=\"prefPrefsList\">";
 		print "<tr><td width=\"40%\">".__("wallabag URL")."</td>";
 		print "<td class=\"prefValue\"><input dojoType=\"dijit.form.ValidationTextBox\" required=\"true\" name=\"wallabag_url\" regExp='^(http|https)://.*' value=\"$w_url\"></td></tr>";
-		print "<tr><td width=\"40%\">".__("wallabag Username")."</td>";
+		print "<tr><td width=\"40%\">".__("wallabag Feed User ID")."</td>";
 		print "<td class=\"prefValue\"><input dojoType=\"dijit.form.ValidationTextBox\" name=\"wallabag_username\" regExp='\w{0,64}' value=\"$w_user\"></td></tr>";
-		print "<tr><td width=\"40%\">".__("wallabag Password")."</td>";
+		print "<tr><td width=\"40%\">".__("wallabag Token")."</td>";
 		print "<td class=\"prefValue\"><input dojoType=\"dijit.form.ValidationTextBox\" name=\"wallabag_password\" regExp='.{0,64}' value=\"$w_pass\"></td></tr>";
 		print "</table>";
 		print "<p><button dojoType=\"dijit.form.Button\" type=\"submit\">".__("Save")."</button>";
