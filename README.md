@@ -8,7 +8,7 @@ wallabag plugin for Tiny-Tiny-RSS
 
 Copy this repo into your plugins folder of ttrss:
 
-    cp /path/to/ttrss-wallabag-plugin /path/to/tinyrss/plugins/
+    cp /path/to/ttrss-wallabag-plugin /path/to/tinyrss/plugins/wallabag
 
 You'll also need to restart the application for changes to take place. 
 If you're running something like php-fpm, here's how to do that:
