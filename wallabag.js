@@ -1,6 +1,6 @@
 function shareArticleTowallabag(id) {
     var legacyMethod = function(url, target) {
-	var w = window.open('backend.php?op=backend&method=loading', 'ttrss_tweet',
+	var w = window.open('backend.php?op=backend&method=loading', 'ttrss_wallabag',
 			    "status=0,toolbar=0,location=0,width=500,height=400,scrollbars=1,menubar=0");
 	// console.log('post ' + target + ' to ' + url + "?action=add&url=" + btoa(target));
 	w.location.href = url + "?action=add&url=" + btoa(target);
@@ -82,6 +82,6 @@ function shareArticleTowallabag(id) {
 		}
 	    } });
     } catch (e) {
-	exception_error("tweetArticle", e);
+	exception_error("wallabagArticle", e);
     }
 }
